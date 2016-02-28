@@ -1,0 +1,14 @@
+<ion-view view-title="Dashboard">
+  <ion-content class="padding" scroll="true">
+    <div class="padding text-center">
+      <p>Welcome to MacWeb!</p>
+      <img ng-src="img/logo.png" width="25%" class="text-center">
+      <p>Here's what we've been up to while you were away:</p>
+    </div>
+    <div class="card" ng-repeat="news in newsfeed">
+      <div class="item item-text-wrap">
+        <h4>{{news.time}}</h4> <h2>{{news.text}}</h2>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

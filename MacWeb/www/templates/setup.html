@@ -1,0 +1,71 @@
+<ion-view view-title="Set Up Profile">
+  <ion-content class="padding">
+
+    <div class="padding text-center">
+      Welcome, [name]!
+    </div>
+
+    <div class="padding text-center">
+      Set up your profile:
+    </div>
+
+    <div class="list">
+      <label class="item item-input item-select">
+        <div class="input-label">Major</div>
+        <select ng-model="user.major">
+          <!-- Implement data structure holding info about majors, etc -->
+          <option selected>Undeclared</option>
+          <option>Computer Science</option>
+          <option>Economics</option>
+        </select>
+      </label>
+
+      <label class="item item-input item-select">
+        <div class="input-label">Year</div>
+        <select ng-model="user.major">
+          <!-- Implement data structure holding info about majors, etc -->
+          <option selected>----</option>
+          <option value="2019">2019</option>
+          <option value="2018">2018</option>
+          <option value="2017">2017</option>
+          <option value="2016">2016</option>
+        </select>
+      </label>
+    </div>
+
+    <p>What do you have questions about?</p>
+    <div class="list">
+      <label>
+        <ion-list>
+          <ion-checkbox ng-model="user.interests[0]">Majors</ion-checkbox>
+          <ion-checkbox ng-model="user.interests[1]">Internships</ion-checkbox>
+          <ion-checkbox ng-model="user.interests[2]">Study Away</ion-checkbox>
+        </ion-list>
+      </label>
+    </div>
+
+    <p>What can you answer questions about?</p>
+    <div class="list">
+      <label>
+        <ion-list>
+          <ion-checkbox ng-model="user.answers[0]">Majors</ion-checkbox>
+          <ion-checkbox ng-model="user.answers[1]">Internships</ion-checkbox>
+          <ion-checkbox ng-model="user.answers[2]">Study Away</ion-checkbox>
+        </ion-list>
+      </label>
+    </div>
+
+  <div class="list">
+    <label class="item item-input">
+      <textarea ng-model="user.description" placeholder="Other Interests"></textarea>
+    </label>
+  </div>
+
+    <div class="padding text-center">
+      <button class="button button-block button-positive" ng-click="profile(user)">
+        Submit
+      </button>
+    </div>
+  </ion-content>
+</ion-view>
+
